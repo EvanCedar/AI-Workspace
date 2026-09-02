@@ -2,11 +2,7 @@
 
 #include <fstream>
 #include <sstream>
-
-Document::Document() : title_(""), contents_(""), sourcePath_("") {
-    
-    // nothing.
-}
+#include <utility>
 
 Document::Document(std::string title, std::string contents) : title_(std::move(title)), contents_(std::move(contents)) {
     
