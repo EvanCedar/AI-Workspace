@@ -11,3 +11,4 @@ Answer briefly in your own words. This is not intended to be a long report.
 4. One implementation decision I verified was using `vector::at()` instead of `operator[]` in the Workspace retrieval functions. This ensures an invalid index throws `std::out_of_range`, as required by the specification.
 
 5. I used generative AI to help explain C++ concepts, review the assignment requirements, assist with debugging syntax errors, and help generate ideas for test cases.
+I affirm that I have thoroughly reviewed all AI-assisted code listed above, that I fully understand how it operates within the broader application architecture, and that I am able to modify or debug it independently.
