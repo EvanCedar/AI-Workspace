@@ -2,12 +2,12 @@
 
 Answer briefly in your own words. This is not intended to be a long report.
 
-1. What responsibility belongs to `Workspace`, and what responsibilities belong to `Document`, `Prompt`, and `Message` instead?
+1. `Workspace` is responsible for storing and organizing collections of Documents, Prompts, and Messages. `Document`, `Prompt`, and `Message` are responsible for managing their own data and behavior.
 
-2. Why are the collections inside `Workspace` private? Explain the purpose of the const and non-const `At` overloads.
+2. The collections in `Workspace` are private so they cannot be changed directly from outside the class. On a `Workspace` class can acces and change those collections. The non-const `At`  allow stored objects to be modified, while the const allow them to be accessed without being changed.
 
-3. Explain one meaningful test you added. What behavior does it check, and what implementation error could it catch?
+3. One meaningful test I added checks that a failed `Document::load()` does not change the existing Document. This could catch an implementation that clears or partially modifies the Document before discovering that the file could not be opened.
 
-4. Describe one implementation decision that you verified, tested, or revised before submitting your work.
+4. One implementation decision I verified was using `vector::at()` instead of `operator[]` in the Workspace retrieval functions. This ensures an invalid index throws `std::out_of_range`, as required by the specification.
 
-5. If generative AI was used, disclose it as required by course policy. If no generative AI was used, state that. The disclosure itself is not used as proof of authorship or understanding.
+5. I used generative AI to help explain C++ concepts, review the assignment requirements, assist with debugging syntax errors, and help generate ideas for test cases.
